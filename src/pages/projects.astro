@@ -3,49 +3,40 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Technical Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
+    title="Reinforcement Learning for Market Making"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="Engineered a Soft Actor-Critic (SAC) agent to optimize bid-ask spreads in a simulated Limit Order Book (LOB). Modeled inventory risk using asymmetric reward functions to manage stochastic price volatility."
     url="#"
-    badge="NEW"
+    badge="REINFORCEMENT LEARNING"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
+    title="Classical-Quantum Hybrid Classifier"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="Developed a novel hybrid protocol utilizing PCA and K-Means for reference centroid selection, implementing a UUt quantum circuit with PennyLane to measure state overlap probability."
     url="#"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
-
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    badge="QUANTUM ML"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 4"
+    title="Malaria Parasite Detection using CNNs"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="Built a Convolutional Neural Network (CNN) using TensorFlow to automate parasite detection from microscopic blood cell images with high accuracy."
     url="#"
+    badge="DEEP LEARNING"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 5"
+    title="Prey Population Dynamics (Lotka-Volterra)"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="Simulated predator-prey stability patterns by numerically solving systems of ODEs with SciPy, validating against historical Hudson Bay datasets to analyze oscillatory behavior."
     url="#"
+    badge="MATHEMATICAL MODELING"
   />
 </BaseLayout>

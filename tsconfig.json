@@ -11,5 +11,10 @@
         "src/layouts/*"
       ]
     }
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.astro"
+  ]
 }
