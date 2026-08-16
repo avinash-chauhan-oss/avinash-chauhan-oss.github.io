@@ -4,16 +4,16 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+  <div class="mb-5 hero-entrance">
+    <div class="text-3xl w-full font-bold gradient-text">Profile</div>
   </div>
 
-  <div class="mb-10 text-justify">
+  <div class="mb-10 text-justify hero-entrance" style="animation-delay: 0.1s">
     I am an undergraduate researcher at IISER Thiruvananthapuram pursuing a BS-MS in i2 Mathematics. My academic and technical foundation lies at the intersection of Stochastic Processes, Optimization, and Reinforcement Learning. I am deeply focused on bridging rigorous mathematical frameworks with corporate business applications, specifically leveraging my background for High-Frequency Trading (HFT) modeling, quantitative finance, and robust market-making strategies.
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
+    <div class="text-3xl w-full font-bold gradient-text">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
@@ -32,7 +32,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience & Research</div>
+    <div class="text-3xl w-full font-bold gradient-text">Experience & Research</div>
   </div>
 
   <div class="time-line-container mb-10">
@@ -63,7 +63,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications & Conferences</div>
+    <div class="text-3xl w-full font-bold gradient-text">Certifications & Conferences</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
@@ -79,29 +79,29 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </ul>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Technical Skills</div>
+    <div class="text-3xl w-full font-bold gradient-text">Technical Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6 mb-10">
-    <li>Python</li>
-    <li>SQL</li>
-    <li>R</li>
-    <li>C++</li>
-    <li>LaTeX</li>
-    <li>PyTorch</li>
-    <li>TensorFlow</li>
-    <li>PennyLane</li>
-    <li>Scikit-Learn</li>
-    <li>Pandas</li>
-    <li>NumPy</li>
-    <li>Deep RL (SAC)</li>
-    <li>Quantum ML</li>
-    <li>Git / GitHub</li>
-    <li>Jupyter / VS Code</li>
-  </ul>
+  <div class="flex flex-wrap mx-2 mb-10">
+    <span class="skill-chip">Python</span>
+    <span class="skill-chip">SQL</span>
+    <span class="skill-chip">R</span>
+    <span class="skill-chip">C++</span>
+    <span class="skill-chip">LaTeX</span>
+    <span class="skill-chip">PyTorch</span>
+    <span class="skill-chip">TensorFlow</span>
+    <span class="skill-chip">PennyLane</span>
+    <span class="skill-chip">Scikit-Learn</span>
+    <span class="skill-chip">Pandas</span>
+    <span class="skill-chip">NumPy</span>
+    <span class="skill-chip">Deep RL (SAC)</span>
+    <span class="skill-chip">Quantum ML</span>
+    <span class="skill-chip">Git / GitHub</span>
+    <span class="skill-chip">Jupyter / VS Code</span>
+  </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Interests & Pursuits</div>
+    <div class="text-3xl w-full font-bold gradient-text">Interests & Pursuits</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
@@ -110,3 +110,28 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <li><strong>Quantitative Personal Finance:</strong> Tracking active systematic investment plans (SIPs) and analyzing diverse financial instruments and equity markets.</li>
   </ul>
 </BaseLayout>
+
+<script>
+  function initScrollReveal() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    document.querySelectorAll('.scroll-reveal').forEach((el) => {
+      observer.observe(el);
+    });
+  }
+
+  // Run on initial load
+  initScrollReveal();
+  // Re-run after Astro page transitions
+  document.addEventListener('astro:page-load', initScrollReveal);
+</script>

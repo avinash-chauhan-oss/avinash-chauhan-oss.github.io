@@ -3,12 +3,12 @@ const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
 ---
 
-<ul class="menu grow shrink menu-md overflow-y-auto">
-  <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-  <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-  <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
-  <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
-  <li>
+<ul class="menu grow shrink menu-md overflow-y-auto perspective-container">
+  <li class="nav-item-3d nav-stagger" style="animation-delay: 0.1s"><a class="py-3 text-base" id="home" href="/">Home</a></li>
+  <li class="nav-item-3d nav-stagger" style="animation-delay: 0.2s"><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
+  <li class="nav-item-3d nav-stagger" style="animation-delay: 0.3s"><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
+  <li class="nav-item-3d nav-stagger" style="animation-delay: 0.4s"><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
+  <li class="nav-item-3d nav-stagger" style="animation-delay: 0.5s">
     <a
       class="py-3 text-base"
       href="mailto:avinash23@iisertvm.ac.in"
