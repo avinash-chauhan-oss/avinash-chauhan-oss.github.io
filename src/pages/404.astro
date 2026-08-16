@@ -2,11 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title = "404: Not Found" includeSidebar={false}>
-  <div class="text-center">
-    <h1 class="text-9xl font-bold mb-4">🏝</h1>
-    <h1 class="text-9xl font-bold mb-2">404</h1>
-    <h3 class="text-2xl">The page you're looking for couldn't be found.</h3>
-    <a class="btn btn-accent mt-9" href="/">Home</a>
+<BaseLayout title="404: Not Found" includeSidebar={false}>
+  <div class="text-center hero-entrance min-h-[60vh] flex flex-col items-center justify-center">
+    <div class="text-9xl font-bold mb-4 gradient-text">404</div>
+    <h3 class="text-2xl font-semibold mb-2 glow-heading">Page Not Found</h3>
+    <p class="text-base opacity-60 mb-8 max-w-md">The page you're looking for doesn't exist or has been moved.</p>
+    <a class="btn btn-3d border-sky-400/30 hover:border-sky-400/60" href="/">Back to Home</a>
   </div>
 </BaseLayout>

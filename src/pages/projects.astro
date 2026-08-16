@@ -4,31 +4,40 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Technical Projects</div>
+  <div class="hero-entrance">
+    <div class="text-3xl w-full font-bold mb-2 gradient-text">Technical Projects</div>
+    <p class="text-base opacity-70 mb-8">A selection of research and engineering work spanning quantitative finance, machine learning, and mathematical modeling.</p>
   </div>
 
   <HorizontalCard
     title="Reinforcement Learning for Market Making"
     img="/post_img.webp"
-    desc="Engineered a Soft Actor-Critic (SAC) agent to optimize bid-ask spreads in a simulated Limit Order Book (LOB). Modeled inventory risk using asymmetric reward functions to manage stochastic price volatility."
-    url="#"
+    desc="Engineered a Soft Actor-Critic (SAC) agent to optimize bid-ask spreads in a simulated Limit Order Book (LOB). Modeled inventory risk using asymmetric reward functions to manage stochastic price volatility. Benchmarked against classical Avellaneda-Stoikov strategies."
+    url="https://github.com/avinash-chauhan-oss/RL-for-Market-Making"
     badge="REINFORCEMENT LEARNING"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Classical-Quantum Hybrid Classifier"
     img="/post_img.webp"
-    desc="Developed a novel hybrid protocol utilizing PCA and K-Means for reference centroid selection, implementing a UUt quantum circuit with PennyLane to measure state overlap probability."
-    url="#"
+    desc="Developed a novel hybrid protocol utilizing PCA and K-Means for reference centroid selection, implementing a UUt quantum circuit with PennyLane to measure state overlap probability for non-linear classification."
+    url="https://github.com/avinash-chauhan-oss/Anvesha-2025-Science-Expo-Project"
     badge="QUANTUM ML"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Gut Microbiome Minimal Reactomes"
+    img="/post_img.webp"
+    desc="Computational pipeline simulating 1,326 pairwise gut microbial communities to evaluate metabolic redundancy and the competitive exclusion principle. Research conducted at IIT Madras under WSAI."
+    url="https://github.com/avinash-chauhan-oss/Gut-Microbiome-Minimal-Reactomes"
+    badge="WSAI INTERNSHIP"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Malaria Parasite Detection using CNNs"
     img="/post_img.webp"
-    desc="Built a Convolutional Neural Network (CNN) using TensorFlow to automate parasite detection from microscopic blood cell images with high accuracy."
-    url="#"
+    desc="Built a Convolutional Neural Network (CNN) using TensorFlow to automate parasite detection from microscopic blood cell images, achieving 95%+ classification accuracy."
+    url="https://github.com/avinash-chauhan-oss/Malaria-Detection-CNN"
     badge="DEEP LEARNING"
   />
   <div class="divider my-0"></div>
@@ -36,7 +45,15 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     title="Prey Population Dynamics (Lotka-Volterra)"
     img="/post_img.webp"
     desc="Simulated predator-prey stability patterns by numerically solving systems of ODEs with SciPy, validating against historical Hudson Bay datasets to analyze oscillatory behavior."
-    url="#"
+    url="https://github.com/avinash-chauhan-oss/Lotka-Volterra-Simulation"
     badge="MATHEMATICAL MODELING"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Customer Segmentation Analysis"
+    img="/post_img.webp"
+    desc="Unsupervised machine learning project applying PCA and K-Means clustering to identify high-value customer segments from retail transactional data using Scikit-Learn."
+    url="https://github.com/avinash-chauhan-oss/Customer-Segmentation-Analysis"
+    badge="UNSUPERVISED ML"
   />
 </BaseLayout>
